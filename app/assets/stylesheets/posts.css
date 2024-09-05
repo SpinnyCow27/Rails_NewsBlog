@@ -1,0 +1,68 @@
+/* Estilo para el contenedor de los posts */
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center;
+  background-color: teal; /* Fondo color teal */
+  padding: 20px;
+}
+
+/* Estilo para cada tarjeta de post */
+.post-card {
+  background-color: white; /* Fondo blanco para la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  padding: 15px;
+  max-width: 300px; /* Ancho máximo de la tarjeta */
+  width: 100%;
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.post-card img {
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo para el título dentro de la tarjeta */
+.post-card h2 {
+  color: white; /* Título en color blanco */
+}
+
+/* Estilo para los enlaces dentro de la tarjeta */
+.post-card a {
+  background-color: teal; /* Fondo color teal para el botón */
+  color: white; /* Texto blanco para el botón */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.post-card a:hover {
+  background-color: darkcyan; /* Color más oscuro en hover */
+}
+
+
+/* Estilo para el botón 'New post' */
+.btn-teal {
+  background-color: yellow; /* Fondo amarillo */
+  color: black; /* Texto negro */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem; /* Espacio superior equivalente a mt-4 */
+}
+
+.btn-teal:hover {
+  background-color: orange; /* Color más oscuro en hover */
+}
+
+/* Estilo para centrar el botón en el contenedor */
+.button-container {
+  text-align: center;
+  margin-top: 1rem; /* Espacio superior equivalente a mt-4 */
+}

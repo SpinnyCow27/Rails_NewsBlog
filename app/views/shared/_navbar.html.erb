@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-teal">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<%= posts_path %>">TheRialNews</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to 'Ver Posts', posts_path, class: 'nav-link' %>
+        </li>
+        <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'Crear Post', new_post_path, class: 'nav-link' %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <%= link_to 'Iniciar sesión', new_user_session_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Registro', new_user_registration_path, class: 'nav-link' %>
+        </li>
+        <% end %>
+        <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= button_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </li>
+        <% end %>
+      </ul>
+      <div class="d-flex align-items-center">
+        <% if user_signed_in? %>
+          <div class="text-dark ms-3">
+            <p class="mb-0">Hola, <%= current_user.email %></p>
+          </div>
+        <% else %>
+          <div class="text-dark ms-3">
+            <p class="mb-0">Puedes iniciar sesión o registrarte!</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</nav>

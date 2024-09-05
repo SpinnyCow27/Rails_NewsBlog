@@ -1,0 +1,11 @@
+one:
+  image: "images/example_image_url_1.jpg"
+  title: "Example Post 1"
+  description: "This is an example post."
+  user: one  # Asegúrate de que esto coincida con un usuario en el archivo `users.yml`
+
+two:
+  image: "images/example_image_url_2.jpg"
+  title: "Example Post 2"
+  description: "This is another example post."
+  user: two  # Asegúrate de que esto coincida con un usuario en el archivo `users.yml`

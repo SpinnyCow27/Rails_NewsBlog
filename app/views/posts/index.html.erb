@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 style="color: white">Posts</h1>
+
+<div class="posts-container">
+  <% @posts.each do |post| %>
+    <div class="post-card">
+      <%= image_tag(post.image, class: "your-custom-class") %>
+      <h2><%= post.title %></h2>
+      <p><strong>Description:</strong> <%= post.description %></p>
+      <%= link_to "Ver este post", post %>
+    </div>
+  <% end %>
+</div>
+<div class="button-container">
+  <%= link_to "POSTEAR", new_post_path, class: "btn-teal" %>
+</div>
+
+
